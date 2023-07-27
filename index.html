@@ -23,6 +23,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'bg-primary': '#F85559',
                     }
                 }
             }
@@ -39,66 +40,67 @@
 
 <body class="font-lato">
     <header class="max-w-7xl mx-auto my-14">
+
+
+        <!--navbar -->
         <nav>
-            <div class="navbar bg-[#F85559] rounded-full">
-                <div class="justify-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </label>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
-                            <li>
-                                <a>About Us</a>
-                            </li>
-                            <li><a>Shop</a></li>
-                            <li><a>All Fruits</a></li>
-                        </ul>
-                    </div>
 
-                </div>
-                <div class="navbar-start hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
+        <div class="navbar bg-base-100  lg:bg-bg-primary rounded-full lg:px-12 py-5 lg:mb-14">
+            
+            <div class="navbar-start">
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-lg font-medium text-white">
                         <li><a>Home</a></li>
-                        <li tabindex="0">
-
-                            <summary>About Us</summary>
-
-                        </li>
+                        <li><a>About Us</a></li>
                         <li><a>Shop</a></li>
                         <li><a>All Fruits</a></li>
                     </ul>
-
                 </div>
-                <div class="navbar-center gap-3">
-                    <img src="./images/logo.png" alt="">
-                    <p class="normal-case text-xl">daisyUI</p>
-                </div>
-                <div class="navbar-end rounde-[50px] relative mr-5">
-                    <div class="form-control">
-                        <div class="input-group">
-                            <input type="text" placeholder="Search here"
-                             class="input input-bordered input-sm rounded-full" />
-                             <div class="absolute right-0"> 
-                                <button class="mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class=" lg:h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="rounded-full" stroke-linejoin="rounded-full" stroke-width="2"
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                            </button>
-                        </div>
-                           
-                        </div>
+                <a class="btn btn-ghost sm:hidden flex items-center ml-auto">
+                    <div class="flex items-center gap-2">
+                        <img src="images/logo.png" class="h-[30px] w-[22px]" alt="">
+                        <p class="text-xl ">Fruit Burst</p>
                     </div>
-                </div>
+                </a>
             </div>
+            <a class="navbar-center max-w-xs hidden sm:block">
+                <div class="flex items-center gap-2">
+                    <img src="images/logo.png" class="h-[54px] w-[60px]" alt="">
+                    <p class="text-4xl font-bold text-white">Fruit Burst</p>
+                </div>
+            </a>
+
+            <div class="navbar-end">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+                <input type="email" placeholder="search here"
+                    class="input input-ghost max-w-xs hidden sm:block rounded-3xl bg-white p-4" />
+                    <div class="absolute right-1 mr-44 hidden sm:block ">
+                        <button class="mt-1">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+            </div>
+        </div>
         </nav>
+
+
+
+
 
         <!--  Banner section -- -->
 
@@ -181,8 +183,8 @@
         </section>
 
         <!-- banner-fruit -->
-        <section class="md:relative drop-shadow-sm">
-            <div class="flex justify-between mx-16 my-12 bg-white md:absolute -top-40 left-7 ">
+        <section class="md:relative drop-shadow-sm  hidden sm:block ">
+            <div class="flex justify-between mx-16 my-12 bg-white md:flex-1 md:absolute -top-40 left-7 ">
                 <div class="m-10">
                     <img src="images/fruit1.png" alt="">
                     <p class="mt-4 text-center">Strawberry</p>
@@ -214,15 +216,15 @@
     <main class="container max-w-7xl mx-auto">
         <!-- Deal section -->
         <section class="my-72 ">
-            <div class="flex justify-around">
-                <div class="leading-6">
+            <div class="grid justify-between lg:grid-flow-col md:grid md:space-x-8 gap-5 text-center auto-cols-max  ">
+                <div class="leading-6 text-start  mr-16">
                     <h3 class="text-5xl font-extrabold">Deal of the day</h3>
-                    <p class="text-base font-normal leading-6 my-5">Contrary to popular belief, is not simply random
-                        text. It has roots in a piece of classical <br> Latin
+                    <p class="text-base font-normal  my-5">Contrary to popular belief, is not simply random
+                        text. It has roots in a piece of classical <br>  Latin
                         literature from 45 BC, making it over 2000 years old.</p>
                 </div>
                 <div>
-                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                    <div class="grid grid-flow-col gap-4 ml-8 text-center auto-cols-max">
                         <div class="flex flex-col">
                             <span class="countdown font-mono text-5xl">
                                 <span style="--value:29;"></span>
@@ -254,7 +256,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-around mt-14">
+            <div class=" mt-14 grid justify-between lg:grid-flow-col md:grid ml-16 ">
                 <!-- card start1-->
                 <div class="card w-64 bg-base-100 shadow-xl">
                     <div>
@@ -617,8 +619,8 @@
                             has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
                             old.</p>
                         <!-- member section -->
-                        <div class="flex justify-around items-center gap-36">
-                            <div class="card w-96">
+                        <div class="mt-14 grid justify-center lg:grid-flow-col md:grid">
+                            <div class="card w-64">
                                 <figure class="px-1 pt-10">
                                     <img src="./images/member1.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -635,7 +637,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card w-64">
                                 <figure class="px-1 pt-10">
                                     <img src="./images/member2.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -652,7 +654,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card w-64">
                                 <figure class="px-1 pt-10">
                                     <img src="./images/member3.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -669,7 +671,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card w-64">
                                 <figure class="px-1 pt-10">
                                     <img src="./images/member4.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -708,7 +710,7 @@
                     literature from 45 BC, making it over 2000 years old.</p>
             </div>
             <!-- choose part-->
-            <div class="flex justify-center items-center gap-5">
+            <div class="mt-14 grid justify-between lg:grid-flow-col md:grid  gap-5">
 
                 <div>
                     <!-- left side-->
@@ -823,7 +825,7 @@
                 <img class="w-8" src="./images/logo.png" alt="">
                 <p class="font-bold text-2xl">Fruit Burst</p>
             </div>
-            <ul class="flex mt-4 text-base font-normal lg:space-x-4">
+            <ul class="flex mt-4 text-base font-normal lg:space-x-4 mt-14 grid justify-between lg:grid-flow-col md:grid ">
                 <li><a href="">Home</a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href=""></a>Shop</li>
